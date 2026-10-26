@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QR Code | Shree Mithai Bhandar</title>
+<style>
+:root{--bg:#FBF4E6;--ink:#2B2320;--accent:#7A1F2B;--line:#E3D6BD}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#FBF4E6;--ink:#2B2320}}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,sans-serif;display:grid;place-items:center;text-align:center;padding:env(safe-area-inset-top,0px) 20px env(safe-area-inset-bottom,0px)}
+h1{font:400 28px Georgia,serif;color:var(--accent);margin:0 0 6px}
+#q{background:#fff;padding:16px;border-radius:16px;border:1px solid var(--line);display:inline-block;margin:20px 0 12px}
+#q img,#q canvas{display:block}
+p{margin:4px 0;font-size:15px}
+</style>
+</head>
+<body>
+<div>
+<h1>Shree Mithai Bhandar</h1>
+<p>Scan to open our website</p>
+<div id="q"></div>
+<p>Long-press or screenshot to save</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+new QRCode(document.getElementById('q'),{text:'https://claude.ai/artifact/DBddgGhFoVtFCawdQLy2x5',width:256,height:256,colorDark:'#2B2320',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+</script>
+</body>
+</html>
